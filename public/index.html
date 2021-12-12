@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keyhouse - Realtime Node Socket.io  Chat App</title>
+    <style>
+        .logo{
+    display: block;
+    margin: auto;
+    width: 112px;
+    height: 60px;
+    position: relative;
+    bottom: 55px;
+}
+
+body{
+    background-image: linear-gradient(rgba(91, 65, 236, 0.534),rgba(128, 219, 100, 0.418));
+    height: 97vh;
+}
+.container{
+    max-width: 920px;
+    border: 2px solid black;
+    margin: auto;
+    height: 70vh;
+    padding: 20px;
+    overflow-y:auto;
+    
+}
+.message{
+    background-color: grey;
+    width: 25%;
+    padding: 10px;
+    margin: 17px 12px;
+    border: 2px solid black;
+    border-radius: 10px;
+
+}
+.left{
+float: left;
+clear: both;
+}
+.right{
+float: right;
+clear: both;
+}
+#send-container{
+    display: block;
+    margin: auto;
+    text-align: center;
+    
+}
+#messageInp{
+    width: 68%;
+    border: 2px solid black;
+    border-radius: 5px;
+    height: 30px;
+    background-color: rgba(105, 90, 205, 0.61);
+    
+    margin: 10px;
+}
+.btn{
+cursor: pointer;
+border: 2px solid black;
+border-radius: 5px;
+height: 36px;
+transition: all 1s ease-in-out;
+background-color: gold;
+}
+.btn:hover{
+    background-color: rgb(0, 162, 255);
+    font-weight: bold;
+    
+}
+nav{
+    height: 5px;
+}
+
+    </style>
+    
+</head>
+<body>
+    <h3 class="clients-total" id="client-total">Total clients:2</h3>
+    <nav>
+        <img class="logo" src="brain-g5be95b85b_1280.png"  alt="">
+    </nav>
+    <div class="container">
+        <div class="message right">Harry:Hey how are you?</div>
+        <div class="message left">Arpit:Bhai I am fine. How about you</div>
+    </div>
+    <div class="send">
+        <form action="#" id="send-container">
+            <input type="text" name="messageInp" id="messageInp">
+            <button class="btn" type="submit">Send</button>
+        </form>
+    </div>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
